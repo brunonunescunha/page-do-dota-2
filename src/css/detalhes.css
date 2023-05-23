@@ -1,0 +1,99 @@
+.modal-detalhes{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(52, 52, 50, 0.749);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s ease-in-out;
+    transform: scale(0);
+}
+
+.modal-detalhes.ativo{
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-detalhes::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.8519782913165266) 0%, rgba(0,0,0,0.4458158263305322) 50%, rgba(0,0,0,0.85) 100%);
+    z-index: -1;
+}
+
+.modal-detalhes::before{
+    position: absolute;
+    content: '';
+    background: url(../img/fundo-detalhes.jpg) center no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+}
+
+.conteudo-modal-detalhes {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    height: 100%;
+}
+
+.conteudo-modal-detalhes .imagem-titulo{
+    margin: 50px 0;
+}
+
+.conteudo-modal-detalhes .informacao{
+    max-width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.conteudo-modal-detalhes .informacao img {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.conteudo-modal-detalhes .descricao-modal{
+    color: #ffffff;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.conteudo-modal-detalhes .descricao-modal span{
+    color: #8D3020;
+}
+
+.conteudo-modal-detalhes .btn-novo-mapa{
+    background-color: #8D3020;
+    color: #ffffff;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: .5s all ease-in-out;
+}
+
+.conteudo-modal-detalhes .btn-novo-mapa:hover{
+    transform: scale(1.1);
+    color: #000000;
+}

@@ -1,0 +1,85 @@
+@media (max-width:1220px) {
+    body{
+        background: url(../img/fundo.png) no-repeat center;
+        background-size: cover;
+        min-height: 100vh;
+        
+    }
+
+    body::after{
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100%;
+        background: rgb(0,0,0);
+        background: linear-gradient(90deg, rgba(0,0,0,0.8519782913165266) 0%, rgba(0,0,0,0.4458158263305322) 50%, rgba(0,0,0,0.85) 100%);
+        z-index: -1;
+    }
+
+    .fundo-video{
+        display: none;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+    }
+
+    .container .dota{
+        margin-top: 30px;
+        max-width: 70%;
+    }
+
+    .container .informacoes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;      
+    }
+
+    .container .informacoes .descricao{
+        color: #ffffff;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width:600px){
+    .conteudo-modal-detalhes .imagem-titulo{
+        width: 50%;
+    }
+    .conteudo-modal-detalhes .descricao-modal{
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:515px){
+    .cabecalho{
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .container .informacoes .imagem-titulo{
+        max-width: 75%;
+    }
+
+    .modal .fechar-modal{
+        width: 30px;
+        line-height: 30px;
+    }
+
+    .modal #video{
+        width: 300px;
+        height: 169px;
+    }
+}
+
+@media (max-width:376px) {
+    .modal #video {
+        width: 250px;
+        height: 140px;
+    }
+}
